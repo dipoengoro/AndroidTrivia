@@ -50,4 +50,12 @@
             app:popUpTo="@id/gameOverFragment"
             app:popUpToInclusive="true" />
     </fragment>
+    <fragment
+        android:id="@+id/about_fragment"
+        android:name="id.dipoengoro.androidtrivia.fragments.AboutFragment"
+        android:label="@string/about" />
+    <fragment
+        android:id="@+id/rulesFragment"
+        android:name="id.dipoengoro.androidtrivia.fragments.RulesFragment"
+        android:label="@string/rules" />
 </navigation>
