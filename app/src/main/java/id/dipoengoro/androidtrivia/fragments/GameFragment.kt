@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import id.dipoengoro.androidtrivia.R
 import id.dipoengoro.androidtrivia.databinding.FragmentGameBinding
 
@@ -72,10 +74,10 @@ class GameFragment : Fragment() {
                             setQuestion()
                             binding.invalidateAll()
                         } else {
-                            // We've won navigate to the gameWonFragment
+                            it.findNavController().navigate(R.id.action_gameFragment_to_gameWonFragment)
                         }
                     } else {
-                        // Game over! A wrong answer sends us to the gameOverFragment
+                        it.findNavController().navigate(R.id.action_gameFragment_to_gameOverFragment)
                     }
                 }
             }

@@ -7,20 +7,20 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import id.dipoengoro.androidtrivia.R
-import id.dipoengoro.androidtrivia.databinding.FragmentGameOverBinding
+import id.dipoengoro.androidtrivia.databinding.FragmentTitleBinding
 
-class GameOverFragment : Fragment() {
+class TitleFragment : Fragment() {
 
-    private lateinit var binding: FragmentGameOverBinding
+    private lateinit var binding: FragmentTitleBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentGameOverBinding.inflate(inflater, container, false)
-        binding.tryAgainButton.setOnClickListener(
-            Navigation.createNavigateOnClickListener(R.id.action_gameOverFragment_to_gameFragment)
+        binding = FragmentTitleBinding.inflate(inflater, container, false)
+        binding.playButton.setOnClickListener(
+            Navigation.createNavigateOnClickListener(R.id.action_titleFragment_to_gameFragment)
         )
         return binding.root
     }

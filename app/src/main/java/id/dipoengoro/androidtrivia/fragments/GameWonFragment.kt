@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
+import id.dipoengoro.androidtrivia.R
 import id.dipoengoro.androidtrivia.databinding.FragmentGameWonBinding
 
 class GameWonFragment : Fragment() {
@@ -16,7 +18,9 @@ class GameWonFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentGameWonBinding.inflate(inflater, container, false)
-
+        binding.nextMatchButton.setOnClickListener(
+            Navigation.createNavigateOnClickListener(R.id.action_gameWonFragment_to_gameFragment)
+        )
         return binding.root
     }
 }
